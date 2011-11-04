@@ -55,6 +55,7 @@ corresponding .ins file can be generated as well.
 %{_bindir}/sty2dtx
 %{_texmfdistdir}/scripts/sty2dtx/sty2dtx.pl
 %doc %{_texmfdistdir}/doc/support/sty2dtx/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,3 +70,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
