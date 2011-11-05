@@ -15,7 +15,8 @@ Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sty2dtx.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sty2dtx.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 Provides:	texlive-sty2dtx.bin = %{EVRD}
 Conflicts:	texlive-texmf <= 20110705-3
 
