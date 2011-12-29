@@ -18,7 +18,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Provides:	texlive-sty2dtx.bin = %{EVRD}
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 The package provides a Perl script that converts a .sty file
@@ -35,20 +34,12 @@ file from 'dtxtut' is used. User level macros are added
 automatically to the 'Usage' section of the .dtx file. A
 corresponding .ins file can be generated as well.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -56,7 +47,6 @@ corresponding .ins file can be generated as well.
 %{_bindir}/sty2dtx
 %{_texmfdistdir}/scripts/sty2dtx/sty2dtx.pl
 %doc %{_texmfdistdir}/doc/support/sty2dtx/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -71,5 +61,3 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
