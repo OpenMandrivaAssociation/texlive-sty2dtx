@@ -1,12 +1,12 @@
-# revision 21295
+# revision 26313
 # category Package
 # catalog-ctan /support/sty2dtx
-# catalog-date 2011-02-02 18:52:18 +0100
+# catalog-date 2011-02-22 16:43:40 +0100
 # catalog-license gpl3
 # catalog-version 2.1
 Name:		texlive-sty2dtx
 Version:	2.1
-Release:	2
+Release:	3
 Summary:	Create a .dtx file from a .sty file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/sty2dtx
