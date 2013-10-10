@@ -1,12 +1,12 @@
-# revision 26313
+# revision 29743
 # category Package
 # catalog-ctan /support/sty2dtx
-# catalog-date 2011-02-22 16:43:40 +0100
+# catalog-date 2012-11-07 20:43:20 +0100
 # catalog-license gpl3
-# catalog-version 2.1
+# catalog-version 2.3
 Name:		texlive-sty2dtx
-Version:	2.1
-Release:	3
+Version:	2.3
+Release:	1
 Summary:	Create a .dtx file from a .sty file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/sty2dtx
@@ -46,7 +46,10 @@ corresponding .ins file can be generated as well.
 %files
 %{_bindir}/sty2dtx
 %{_texmfdistdir}/scripts/sty2dtx/sty2dtx.pl
+%doc %{_mandir}/man1/sty2dtx.1*
+%doc %{_texmfdistdir}/doc/man/man1/sty2dtx.man1.pdf
 %doc %{_texmfdistdir}/doc/support/sty2dtx/README
+%doc %{_texmfdistdir}/doc/support/sty2dtx/sty2dtx.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,21 +64,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.1-3
-+ Revision: 812883
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.1-2
-+ Revision: 756288
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.1-1
-+ Revision: 719598
-- texlive-sty2dtx
-- texlive-sty2dtx
-- texlive-sty2dtx
-- texlive-sty2dtx
-
+mkdir -p %{buildroot}%{_mandir}/man1
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
