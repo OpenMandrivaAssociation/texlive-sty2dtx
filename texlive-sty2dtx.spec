@@ -6,7 +6,7 @@
 # catalog-version 2.3
 Name:		texlive-sty2dtx
 Version:	2.3
-Release:	9
+Release:	10
 Summary:	Create a .dtx file from a .sty file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/sty2dtx
