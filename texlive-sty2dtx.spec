@@ -1,6 +1,6 @@
 Name:		texlive-sty2dtx
 Version:	64967
-Release:	1
+Release:	2
 Summary:	Create a .dtx file from a .sty file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/sty2dtx
