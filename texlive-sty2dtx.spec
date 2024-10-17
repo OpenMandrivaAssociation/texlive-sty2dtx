@@ -3,7 +3,7 @@ Version:	64967
 Release:	2
 Summary:	Create a .dtx file from a .sty file
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/sty2dtx
+URL:		https://www.ctan.org/tex-archive/support/sty2dtx
 License:	GPL3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sty2dtx.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sty2dtx.doc.r%{version}.tar.xz
